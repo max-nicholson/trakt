@@ -101,6 +101,7 @@ pub mod history {
         }
 
         #[derive(Debug, Clone, Eq, PartialEq, Hash, serde::Deserialize, trakt_macros::Response)]
+        #[trakt(expected = CREATED)]
         pub struct Response {
             pub added: Added,
             pub not_found: NotFound,
